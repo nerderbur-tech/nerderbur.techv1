@@ -11,11 +11,9 @@ import "./default-layout.css"
 const DefaultLayout = () => {
   return (
     <>
-      <div></div>
+      <div>Test</div>
     </>
   )
 }
 
-Layout.propTypes = {}
-
-export default Layout
+export default DefaultLayout
