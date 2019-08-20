@@ -192,7 +192,13 @@ const DefaultLayout = ({ children }) => {
             </Navigation>
           </SiteNav>
         </NavbarContainer>
-        <div className="page-content">{children}</div>
+        <div
+          style={{
+            height: "100%",
+          }}
+        >
+          {children}
+        </div>
       </Container>
     </>
   )
