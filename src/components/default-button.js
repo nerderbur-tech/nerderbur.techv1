@@ -26,11 +26,11 @@ export const DefaultBtnOutline = styled.button`
   border-radius: 15px;
   background: none;
   border: 0.3rem solid var(--primary-color);
-  padding: 1.3rem 2.2rem;
+  padding: 1.6rem 2.2rem;
   color: var(--primary-color);
 
   @media ${device.md} {
     font-size: 1.8rem;
-    padding: 1.8rem 3.4em;
+    padding: 2.1rem 3.4em;
   }
 `
