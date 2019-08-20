@@ -1,9 +1,11 @@
 import React from "react"
-import DefaultLayout from "../components/default-layout/default-layout"
+import DefaultLayout from "../components/default-layout"
+import SEO from "../components/seo"
 
 const HomePage = () => {
   return (
     <DefaultLayout>
+      <SEO title="Home" />
       <div className="container">
         <div className="intro">
           <h1 className="font-primary-1 spaced-heading site-heading">
