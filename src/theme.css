@@ -1,0 +1,23 @@
+body {
+  min-height: 100%;
+  background: url("./images/mobile-bg.png.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: url("./images/tablet-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    background: url("./images/bg-desktop.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
