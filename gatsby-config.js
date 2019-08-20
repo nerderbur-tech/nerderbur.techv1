@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Leon Wright`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Not just your average web developer. But a great one who cares. Leon Wright will always ensure you recieve the most value possible when you work with him.`,
     author: `Leon Wright`,
   },
   plugins: [
