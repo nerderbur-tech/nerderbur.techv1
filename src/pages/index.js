@@ -1,21 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
+import DefaultLayout from "../components/default-layout/default-layout"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const HomePage = () => {
+  return (
+    <DefaultLayout>
+      <div className="container">
+        <div className="intro">
+          <h1 className="font-primary-1 spaced-heading site-heading">
+            Leon Wright
+          </h1>
+          <span className="sub-heading">
+            I am <span className="font-accent">a Developer</span>
+          </span>
+        </div>
+        <div className="cta">
+          <button className="btn btn-default">Download Resume</button>
+          <button className="btn btn-default-outline">Contact Me</button>
+        </div>
+      </div>
+    </DefaultLayout>
+  )
+}
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi World!</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/home/">Go to page 2</Link>
-  </Layout>
-)
-
-export default IndexPage
+export default HomePage

@@ -1,0 +1,22 @@
+body {
+  background: url("./mobile-bg.png.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@include media-breakpoint-up(md) {
+  body {
+    background: url("./tablet-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body {
+    background: url("./bg-desktop.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

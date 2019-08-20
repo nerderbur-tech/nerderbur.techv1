@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768.346" height="1080" viewBox="0 0 768.346 1080">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="1" y2="0.752" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#21c493" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#21c493"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.983" y1="0.527" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#21c493" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#20bab7"/>
+    </linearGradient>
+  </defs>
+  <g id="bg-desktop" transform="translate(-1152.047)">
+    <path id="Path_4" data-name="Path 4" d="M-245.652-4082s343.237,33.442,467.679,193.353S522.3-3793.97,522.3-3793.97V-4082Z" transform="translate(1397.699 4082)" fill="url(#linear-gradient)"/>
+    <path id="Path_1" data-name="Path 1" d="M444.393-3695.458s-7.225,188.864-84.082,256.642S158.239-3358.074,37.165-3308.6s-156.284,103.572-156.284,103.572H444.393Z" transform="translate(1476 4285.032)" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>
