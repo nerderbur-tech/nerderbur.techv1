@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { device } from "../devices"
 
-export const DefaultBtn = styled.button`
+export const DefaultBtn = styled.a`
   cursor: pointer;
   font-size: 1.2rem;
   background: linear-gradient(
@@ -13,6 +13,7 @@ export const DefaultBtn = styled.button`
   padding: 1.6rem 2.2rem;
   border: none;
   border-radius: 15px;
+  text-decoration: none;
 
   @media ${device.md} {
     font-size: 1.8rem;

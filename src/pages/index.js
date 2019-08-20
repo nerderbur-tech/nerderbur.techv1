@@ -56,7 +56,13 @@ const HomePage = () => {
             marginTop: "2rem",
           }}
         >
-          <DefaultBtn>Download Resume</DefaultBtn>
+          <DefaultBtn
+            href="https://docs.google.com/document/d/e/2PACX-1vTeiMzaQi9Pm9BSqayiySFBxJAlYCdZVF6uP_lXZTpF5ENLRogdfBxSvgRFmbaTCrdL_PB0c3ljpjwa/pub"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Download Resume
+          </DefaultBtn>
           <DefaultBtnOutline style={{ marginLeft: "1rem" }}>
             Contact Me
           </DefaultBtnOutline>
