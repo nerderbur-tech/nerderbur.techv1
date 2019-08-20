@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { device } from "./../../devices"
 import "./../../normalize.css"
+import "./../../typography.css"
 
 import menuBtn from "./../../images/menu-btn.svg"
 import profilePhto from "./../../images/leonwright.png"
