@@ -7,7 +7,7 @@ export const DefaultBtn = styled.a`
   background: linear-gradient(
     to right,
     var(--primary-color),
-    var(--primary-color)
+    var(--accent-color)
   );
   color: #fff;
   padding: 1.6rem 2.2rem;

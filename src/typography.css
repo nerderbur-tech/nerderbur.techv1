@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700|Roboto:300,400,700&display=swap");
 
-:root {
-  --primary-color: #27ae60;
-  --primary-color-1: #21c493;
-  --accent-color: #20bab7;
-}
-
 body {
   font-family: "Nunito", sans-serif;
 }

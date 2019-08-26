@@ -1,3 +1,13 @@
+:root {
+  --primary-color: #27ae60;
+  --primary-color-1: #21c493;
+  --accent-color: #20bab7;
+
+  --input-background: #f7f7f7;
+  --input-border: #707070;
+  --input-font-color: #87d9d8;
+}
+
 body {
   min-height: 100%;
   background: url("./images/mobile-bg.png.svg");

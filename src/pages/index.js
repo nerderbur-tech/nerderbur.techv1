@@ -1,11 +1,26 @@
-import React from "react"
+import React, { Component } from "react"
 import DefaultLayout from "../components/default-layout"
 import SEO from "../components/seo"
+import Modal from "react-modal"
 
 import styled from "styled-components"
 import { device } from "../devices"
 
 import { DefaultBtn, DefaultBtnOutline } from "../components/default-button"
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+  overlay: {
+    backgroundColor: "rgba(0,0,0,.50)",
+  },
+}
 
 const Container = styled.div`
   height: 100%;
@@ -38,38 +53,77 @@ const SubHeading = styled.span`
   }
 `
 
-const HomePage = () => {
-  return (
-    <DefaultLayout>
-      <SEO title="Home" />
-      <Container>
-        <div className="intro">
-          <DeveloperName className="spaced-heading site-heading">
-            Leon Wright
-          </DeveloperName>
-          <SubHeading className="sub-heading">
-            I am <span className="font-accent">a Developer</span>
-          </SubHeading>
-        </div>
-        <div
-          style={{
-            marginTop: "2rem",
-          }}
-        >
-          <DefaultBtn
-            href="https://docs.google.com/document/d/e/2PACX-1vTeiMzaQi9Pm9BSqayiySFBxJAlYCdZVF6uP_lXZTpF5ENLRogdfBxSvgRFmbaTCrdL_PB0c3ljpjwa/pub"
-            rel="noopener noreferrer"
-            target="_blank"
+class HomePage extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isModalOpen: false,
+    }
+  }
+
+  handleModalOpen = event => {
+    // console.log('handleModalOpen: ', event);
+    this.setState({ isModalOpen: true })
+  }
+
+  handleModalClose = event => {
+    // console.log('handleModalOpen: ', event);
+    this.setState({ isModalOpen: false })
+  }
+
+  render() {
+    return (
+      <DefaultLayout>
+        <SEO title="Home" />
+        <Container>
+          <div className="intro">
+            <DeveloperName className="spaced-heading site-heading">
+              Leon Wright
+            </DeveloperName>
+            <SubHeading className="sub-heading">
+              I am <span className="font-accent">a Developer</span>
+            </SubHeading>
+          </div>
+          <div
+            style={{
+              marginTop: "2rem",
+            }}
           >
-            Download Resume
-          </DefaultBtn>
-          <DefaultBtnOutline style={{ marginLeft: "1rem" }}>
-            Contact Me
-          </DefaultBtnOutline>
-        </div>
-      </Container>
-    </DefaultLayout>
-  )
+            <DefaultBtn
+              href="https://docs.google.com/document/d/e/2PACX-1vTeiMzaQi9Pm9BSqayiySFBxJAlYCdZVF6uP_lXZTpF5ENLRogdfBxSvgRFmbaTCrdL_PB0c3ljpjwa/pub"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Download Resume
+            </DefaultBtn>
+            <DefaultBtnOutline
+              style={{ marginLeft: "1rem" }}
+              onClick={this.handleModalOpen}
+            >
+              Contact Me
+            </DefaultBtnOutline>
+          </div>
+        </Container>
+        <Modal
+          isOpen={this.state.isModalOpen}
+          onRequestClose={this.handleModalClose}
+          contentLabel="Example Modal In Gatsby"
+          style={customStyles}
+        >
+          <h2 ref={subtitle => (this.subtitle = subtitle)}>Hello</h2>
+          <button onClick={this.handleModalClose}>close</button>
+          <div>I am a modal</div>
+          <form>
+            <input />
+            <button>tab navigation</button>
+            <button>stays</button>
+            <button>inside</button>
+            <button>the modal</button>
+          </form>
+        </Modal>
+      </DefaultLayout>
+    )
+  }
 }
 
 export default HomePage

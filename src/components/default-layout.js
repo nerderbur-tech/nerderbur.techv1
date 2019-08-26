@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { Link } from "gatsby"
 import { device } from "../devices"
 import "./../normalize.css"
 import "./../typography.css"
@@ -138,7 +139,7 @@ const NavigationItem = styled.li`
   }
 `
 
-const NavigationLink = styled.a`
+const NavigationLink = styled(Link)`
   text-decoration: none;
   color: #fff;
 `
@@ -184,9 +185,7 @@ const DefaultLayout = ({ children }) => {
                     </NavigationLink>
                   </NavigationItem>
                   <NavigationItem>
-                    <NavigationLink href="http://leonwright.me">
-                      Contact
-                    </NavigationLink>
+                    <NavigationLink to="/contact">Contact</NavigationLink>
                   </NavigationItem>
                 </NavigationItems>
               </div>
