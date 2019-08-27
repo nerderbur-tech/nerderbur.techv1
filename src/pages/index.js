@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import DefaultLayout from "../components/default-layout"
 import SEO from "../components/seo"
 import Modal from "react-modal"
+import Typed from "react-typed"
 
 import styled from "styled-components"
 import { device } from "../devices"
@@ -81,7 +82,14 @@ class HomePage extends Component {
               Leon Wright
             </DeveloperName>
             <SubHeading className="sub-heading">
-              I am <span className="font-accent">a Developer</span>
+              I am{" "}
+              <Typed
+                className="font-accent"
+                strings={["a Developer.", "a UI/UX Designer.", "a Nerd."]}
+                typeSpeed={150}
+                backSpeed={50}
+                loop
+              ></Typed>
             </SubHeading>
           </div>
           <div
