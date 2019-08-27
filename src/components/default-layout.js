@@ -160,29 +160,19 @@ const DefaultLayout = ({ children }) => {
               <div className="navigation__body">
                 <NavigationItems>
                   <NavigationItem>
-                    <NavigationLink href="http://leonwright.me">
-                      Home
-                    </NavigationLink>
+                    <NavigationLink to="/">Home</NavigationLink>
                   </NavigationItem>
                   <NavigationItem>
-                    <NavigationLink href="http://leonwright.me">
-                      About Me
-                    </NavigationLink>
+                    <NavigationLink to="/about">About Me</NavigationLink>
                   </NavigationItem>
                   <NavigationItem>
-                    <NavigationLink href="http://leonwright.me">
-                      My Resume
-                    </NavigationLink>
+                    <NavigationLink to="/resume">My Resume</NavigationLink>
                   </NavigationItem>
                   <NavigationItem>
-                    <NavigationLink href="http://leonwright.me">
-                      Portfolio
-                    </NavigationLink>
+                    <NavigationLink to="/portfolio">Portfolio</NavigationLink>
                   </NavigationItem>
                   <NavigationItem>
-                    <NavigationLink href="http://leonwright.me">
-                      Blog
-                    </NavigationLink>
+                    <NavigationLink to="/blog">Blog</NavigationLink>
                   </NavigationItem>
                   <NavigationItem>
                     <NavigationLink to="/contact">Contact</NavigationLink>

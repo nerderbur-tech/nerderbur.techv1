@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { device } from "../devices"
+import { Link } from "gatsby"
 
 export const DefaultBtn = styled.a`
   cursor: pointer;
@@ -14,6 +15,7 @@ export const DefaultBtn = styled.a`
   border: none;
   border-radius: 15px;
   text-decoration: none;
+  display: inline-block;
 
   @media ${device.md} {
     font-size: 1.8rem;
@@ -26,11 +28,13 @@ export const DefaultBtnOutline = styled.button`
   border-radius: 15px;
   background: none;
   border: 0.3rem solid var(--primary-color);
-  padding: 1.6rem 2.2rem;
+  padding: 1.3rem 2.2rem;
   color: var(--primary-color);
+  text-decoration: none;
+  display: inline-block;
 
   @media ${device.md} {
     font-size: 1.8rem;
-    padding: 2.1rem 3.4em;
+    padding: 1.8rem 3.4em;
   }
 `

@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "gatsby"
 import DefaultLayout from "../components/default-layout"
 import SEO from "../components/seo"
 import Modal from "react-modal"
@@ -105,8 +106,9 @@ class HomePage extends Component {
               Download Resume
             </DefaultBtn>
             <DefaultBtnOutline
-              style={{ marginLeft: "1rem" }}
-              onClick={this.handleModalOpen}
+              as={Link}
+              to="/contact"
+              style={{ marginLeft: "15px" }}
             >
               Contact Me
             </DefaultBtnOutline>
