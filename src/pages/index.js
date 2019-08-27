@@ -85,7 +85,7 @@ class HomePage extends Component {
               I am{" "}
               <Typed
                 className="font-accent"
-                strings={["a Developer.", "a UI/UX Designer.", "a Nerd."]}
+                strings={["a developer.", "a UI/UX designer.", "a nerd."]}
                 typeSpeed={150}
                 backSpeed={50}
                 loop
