@@ -37,6 +37,10 @@ const DefaultInput = styled.input`
   font-size: 18px;
   color: var(--accent-color);
 
+  &::placeholder {
+    color: var(--accent-color);
+  }
+
   @media ${device.md} {
     padding: 15px 200px 15px 15px;
   }
@@ -50,6 +54,10 @@ const DefaultTextarea = styled.textarea`
   padding: 15px 50px 15px 15px;
   font-size: 18px;
   color: var(--accent-color);
+
+  &::placeholder {
+    color: var(--accent-color);
+  }
 `
 
 const SendBtn = styled(DefaultBtn)`
@@ -69,6 +77,13 @@ const ContactFormText = styled.span`
 `
 
 class ContactPage extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  onSubmit = event => {
+    console.log("Form submitted")
+  }
   render() {
     return (
       <DefaultLayout>
@@ -83,7 +98,7 @@ class ContactPage extends Component {
             <DefaultInput placeholder="full name" />
             <DefaultInput placeholder="email" />
             <DefaultTextarea placeholder="your message" rows="5" />
-            <SendBtn>Send</SendBtn>
+            <SendBtn onClick={this.onSubmit}>Send</SendBtn>
           </ContactForm>
         </Container>
       </DefaultLayout>

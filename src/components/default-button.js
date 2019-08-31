@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { device } from "../devices"
-import { Link } from "gatsby"
 
 export const DefaultBtn = styled.a`
   cursor: pointer;

@@ -16,6 +16,7 @@ import "./../theme.css"
 
 import menuBtn from "./../images/menu-btn.svg"
 import profilePhto from "./../images/leonwright.png"
+import Firebase, { FirebaseContext } from "./Firebase"
 
 const Container = styled.div`
   height: 100vh;
@@ -146,7 +147,7 @@ const NavigationLink = styled(Link)`
 
 const DefaultLayout = ({ children }) => {
   return (
-    <>
+    <FirebaseContext.Provider value={new Firebase()}>
       <Container>
         <NavbarContainer>
           <SiteNav>
@@ -190,7 +191,7 @@ const DefaultLayout = ({ children }) => {
           {children}
         </div>
       </Container>
-    </>
+    </FirebaseContext.Provider>
   )
 }
 
