@@ -16,7 +16,6 @@ import "./../theme.css"
 
 import menuBtn from "./../images/menu-btn.svg"
 import profilePhto from "./../images/leonwright.png"
-import Firebase, { FirebaseContext } from "./Firebase"
 
 const Container = styled.div`
   height: 100vh;
@@ -147,51 +146,49 @@ const NavigationLink = styled(Link)`
 
 const DefaultLayout = ({ children }) => {
   return (
-    <FirebaseContext.Provider value={new Firebase()}>
-      <Container>
-        <NavbarContainer>
-          <SiteNav>
-            <MobileMenuBtn src={menuBtn} alt="menu-btn" />
+    <Container>
+      <NavbarContainer>
+        <SiteNav>
+          <MobileMenuBtn src={menuBtn} alt="menu-btn" />
 
-            <Navigation>
-              <NavigationHeader>
-                <ProfilePhoto src={profilePhto} alt="" />
-                <ProfileName>Leon Wright</ProfileName>
-              </NavigationHeader>
-              <div className="navigation__body">
-                <NavigationItems>
-                  <NavigationItem>
-                    <NavigationLink to="/">Home</NavigationLink>
-                  </NavigationItem>
-                  <NavigationItem>
-                    <NavigationLink to="/about">About Me</NavigationLink>
-                  </NavigationItem>
-                  <NavigationItem>
-                    <NavigationLink to="/resume">My Resume</NavigationLink>
-                  </NavigationItem>
-                  <NavigationItem>
-                    <NavigationLink to="/portfolio">Portfolio</NavigationLink>
-                  </NavigationItem>
-                  <NavigationItem>
-                    <NavigationLink to="/blog">Blog</NavigationLink>
-                  </NavigationItem>
-                  <NavigationItem>
-                    <NavigationLink to="/contact">Contact</NavigationLink>
-                  </NavigationItem>
-                </NavigationItems>
-              </div>
-            </Navigation>
-          </SiteNav>
-        </NavbarContainer>
-        <div
-          style={{
-            height: "100%",
-          }}
-        >
-          {children}
-        </div>
-      </Container>
-    </FirebaseContext.Provider>
+          <Navigation>
+            <NavigationHeader>
+              <ProfilePhoto src={profilePhto} alt="" />
+              <ProfileName>Leon Wright</ProfileName>
+            </NavigationHeader>
+            <div className="navigation__body">
+              <NavigationItems>
+                <NavigationItem>
+                  <NavigationLink to="/">Home</NavigationLink>
+                </NavigationItem>
+                <NavigationItem>
+                  <NavigationLink to="/about">About Me</NavigationLink>
+                </NavigationItem>
+                <NavigationItem>
+                  <NavigationLink to="/resume">My Resume</NavigationLink>
+                </NavigationItem>
+                <NavigationItem>
+                  <NavigationLink to="/portfolio">Portfolio</NavigationLink>
+                </NavigationItem>
+                <NavigationItem>
+                  <NavigationLink to="/blog">Blog</NavigationLink>
+                </NavigationItem>
+                <NavigationItem>
+                  <NavigationLink to="/contact">Contact</NavigationLink>
+                </NavigationItem>
+              </NavigationItems>
+            </div>
+          </Navigation>
+        </SiteNav>
+      </NavbarContainer>
+      <div
+        style={{
+          height: "100%",
+        }}
+      >
+        {children}
+      </div>
+    </Container>
   )
 }
 
