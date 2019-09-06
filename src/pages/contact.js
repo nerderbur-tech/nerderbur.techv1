@@ -77,10 +77,6 @@ const ContactFormText = styled.span`
 `
 
 class ContactPage extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   onSubmit = event => {
     console.log("Form submitted")
   }
