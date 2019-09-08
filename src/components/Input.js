@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const DefaultInput = styled.input(props => ({
+  boxSizing: "border-box",
   display: "block",
   "margin-bottom": "10px",
   "background-color": "var(--input-background)",
@@ -14,6 +15,7 @@ const DefaultInput = styled.input(props => ({
     fontWeight: 300,
     opacity: "0.5",
   },
+  width: "100%",
   padding: "15px",
   "@media (min-width: 768px)": {
     width: "400px",
@@ -28,6 +30,7 @@ const DefaultInput = styled.input(props => ({
 }))
 
 const DefaultTextarea = styled.textarea(props => ({
+  boxSizing: "border-box",
   display: "block",
   "margin-bottom": "10px",
   "background-color": "var(--input-background)",
@@ -35,9 +38,9 @@ const DefaultTextarea = styled.textarea(props => ({
   "border-radius": "15px",
   "font-size": "18px",
   color: "var(--accent-color)",
+  "max-width": "100%",
+  "min-width": "100%",
   padding: "15px",
-  "max-width": "400px",
-  "min-width": "400px",
 
   "-webkit-animation-name": props.invalid && props.touched ? "shake" : "none",
   "animation-name": props.invalid && props.touched ? "shake" : "none",
@@ -50,6 +53,10 @@ const DefaultTextarea = styled.textarea(props => ({
     color: "var(--accent-color)",
     opacity: "0.5",
     "font-weight": "300",
+  },
+  "@media (min-width: 768px)": {
+    "max-width": "400px",
+    "min-width": "400px",
   },
 }))
 

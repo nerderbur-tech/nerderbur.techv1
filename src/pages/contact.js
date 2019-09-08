@@ -8,6 +8,8 @@ import styled from "styled-components"
 
 import Input from "./../components/Input"
 
+import { Requester } from "./../lib"
+
 const Container = styled.div`
   height: 100%;
   display: flex;
@@ -169,7 +171,23 @@ class ContactPage extends Component {
     }
 
     if (this.state.formValid) {
-      // TODO: Make cloud run api call
+      console.log(formData)
+      const requester = new Requester()
+      requester
+        .callMarketingService("POST", "leads/", {
+          ...formData,
+          leadType: "contact-form",
+        })
+        .then(() => {
+          alert(
+            "Message successfully sent!\nLook out for a reply from me very soon."
+          )
+        })
+        .catch(e => {
+          alert(
+            "There was an error sending your message!\nPlease try again later."
+          )
+        })
     }
   }
 
