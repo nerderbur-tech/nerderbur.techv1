@@ -18,11 +18,18 @@ const DefaultInput = styled.input(props => ({
   "@media (min-width: 768px)": {
     width: "400px",
   },
+
+  "-webkit-animation-name": props.invalid && props.touched ? "shake" : "none",
+  "animation-name": props.invalid && props.touched ? "shake" : "none",
+  "-webkit-animation-duration": "0.7s",
+  "animation-duration": "0.7s",
+  "-webkit-animation-fill-mode": "both",
+  "animation-fill-mode": "both",
 }))
 
 const DefaultTextarea = styled.textarea(props => ({
   display: "block",
-  "margin-bottom": "20px",
+  "margin-bottom": "10px",
   "background-color": "var(--input-background)",
   border: props.invalid && props.touched ? "1px solid red" : "none",
   "border-radius": "15px",
@@ -32,10 +39,17 @@ const DefaultTextarea = styled.textarea(props => ({
   "max-width": "400px",
   "min-width": "400px",
 
+  "-webkit-animation-name": props.invalid && props.touched ? "shake" : "none",
+  "animation-name": props.invalid && props.touched ? "shake" : "none",
+  "-webkit-animation-duration": "0.7s",
+  "animation-duration": "0.7s",
+  "-webkit-animation-fill-mode": "both",
+  "animation-fill-mode": "both",
+
   "&:: placeholder": {
     color: "var(--accent-color)",
     opacity: "0.5",
-    "font - weight": "300",
+    "font-weight": "300",
   },
 }))
 
