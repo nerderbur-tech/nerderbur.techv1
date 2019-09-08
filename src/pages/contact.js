@@ -171,7 +171,6 @@ class ContactPage extends Component {
     }
 
     if (this.state.formValid) {
-      console.log(formData)
       const requester = new Requester()
       requester
         .callMarketingService("POST", "leads/", {
@@ -179,6 +178,7 @@ class ContactPage extends Component {
           leadType: "contact-form",
         })
         .then(() => {
+          this.resetForm()
           alert(
             "Message successfully sent!\nLook out for a reply from me very soon."
           )
@@ -189,6 +189,18 @@ class ContactPage extends Component {
           )
         })
     }
+  }
+
+  resetForm = () => {
+    const updatedContactForm = {
+      ...this.state.contactForm,
+    }
+    for (let inputId in updatedContactForm) {
+      updatedContactForm[inputId].value = ""
+      updatedContactForm[inputId].valid = false
+      updatedContactForm[inputId].touched = false
+    }
+    this.setState({ contactForm: updatedContactForm, formValid: false })
   }
 
   render() {
