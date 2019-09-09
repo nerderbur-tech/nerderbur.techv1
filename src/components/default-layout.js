@@ -162,18 +162,25 @@ const DefaultLayout = ({ children }) => {
                 <NavigationItem>
                   <NavigationLink to="/">Home</NavigationLink>
                 </NavigationItem>
-                <NavigationItem>
+                {/* <NavigationItem>
                   <NavigationLink to="/about">About Me</NavigationLink>
-                </NavigationItem>
+                </NavigationItem> */}
                 <NavigationItem>
-                  <NavigationLink to="/resume">My Resume</NavigationLink>
+                  <NavigationLink
+                    as="a"
+                    href="https://docs.google.com/document/d/e/2PACX-1vTeiMzaQi9Pm9BSqayiySFBxJAlYCdZVF6uP_lXZTpF5ENLRogdfBxSvgRFmbaTCrdL_PB0c3ljpjwa/pub"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    My Resume
+                  </NavigationLink>
                 </NavigationItem>
-                <NavigationItem>
+                {/* <NavigationItem>
                   <NavigationLink to="/portfolio">Portfolio</NavigationLink>
                 </NavigationItem>
                 <NavigationItem>
                   <NavigationLink to="/blog">Blog</NavigationLink>
-                </NavigationItem>
+                </NavigationItem> */}
                 <NavigationItem>
                   <NavigationLink to="/contact">Contact</NavigationLink>
                 </NavigationItem>
