@@ -25,7 +25,7 @@ const Container = styled.div`
     height: 100vh;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 400px auto;
+    grid-template-columns: 25% auto;
   }
 `
 
@@ -55,8 +55,11 @@ const SiteNav = styled.nav`
     );
     z-index: unset;
     position: relative;
-    padding-right: 17px;
-    box-sizing: content-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 `
 
@@ -88,7 +91,7 @@ const NavigationHeader = styled.div`
 const ProfilePhoto = styled.img`
   border-radius: 370px;
   border: 5px solid white;
-  width: 200px;
+  width: 50%;
 `
 
 const ProfileName = styled.span`
