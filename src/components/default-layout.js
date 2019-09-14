@@ -18,6 +18,8 @@ import "./../theme.css"
 import menuBtn from "./../images/menu-btn.svg"
 import profilePhto from "./../images/leonwright.png"
 
+import MobileNav from "./MobileNav/MobileNav"
+
 const Container = styled.div`
   height: 100vh;
 
@@ -148,59 +150,83 @@ const NavigationLink = styled(Link)`
   color: #fff;
 `
 
-const DefaultLayout = ({ children }) => {
-  return (
-    <Container>
-      <NavbarContainer>
-        <SiteNav>
-          <MobileMenuBtn src={menuBtn} alt="menu-btn" />
+class DefaultLayout extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      mobileNav: {
+        isOpen: false,
+      },
+    }
+  }
 
-          <Navigation>
-            <NavigationHeader>
-              <ProfilePhoto src={profilePhto} alt="" />
-              <ProfileName>Leon Wright</ProfileName>
-            </NavigationHeader>
-            <div className="navigation__body">
-              <NavigationItems>
-                <NavigationItem>
-                  <NavigationLink to="/">Home</NavigationLink>
-                </NavigationItem>
-                {/* <NavigationItem>
+  toggleMobileNav = () => {
+    const { mobileNav } = { ...this.state }
+    mobileNav.isOpen = !mobileNav.isOpen
+    this.setState({ mobileNav: mobileNav })
+  }
+
+  render() {
+    return (
+      <>
+        <MobileNav state={this.state.mobileNav} toggle={this.toggleMobileNav} />
+        <Container>
+          <NavbarContainer>
+            <SiteNav>
+              <MobileMenuBtn
+                src={menuBtn}
+                alt="menu-btn"
+                onClick={this.toggleMobileNav}
+              />
+
+              <Navigation>
+                <NavigationHeader>
+                  <ProfilePhoto src={profilePhto} alt="" />
+                  <ProfileName>Leon Wright</ProfileName>
+                </NavigationHeader>
+                <div className="navigation__body">
+                  <NavigationItems>
+                    <NavigationItem>
+                      <NavigationLink to="/">Home</NavigationLink>
+                    </NavigationItem>
+                    {/* <NavigationItem>
                   <NavigationLink to="/about">About Me</NavigationLink>
                 </NavigationItem> */}
-                <NavigationItem>
-                  <NavigationLink
-                    as="a"
-                    href="https://docs.google.com/document/d/e/2PACX-1vTeiMzaQi9Pm9BSqayiySFBxJAlYCdZVF6uP_lXZTpF5ENLRogdfBxSvgRFmbaTCrdL_PB0c3ljpjwa/pub"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    My Resume
-                  </NavigationLink>
-                </NavigationItem>
-                {/* <NavigationItem>
+                    <NavigationItem>
+                      <NavigationLink
+                        as="a"
+                        href="https://docs.google.com/document/d/e/2PACX-1vTeiMzaQi9Pm9BSqayiySFBxJAlYCdZVF6uP_lXZTpF5ENLRogdfBxSvgRFmbaTCrdL_PB0c3ljpjwa/pub"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        My Resume
+                      </NavigationLink>
+                    </NavigationItem>
+                    {/* <NavigationItem>
                   <NavigationLink to="/portfolio">Portfolio</NavigationLink>
                 </NavigationItem>
                 <NavigationItem>
                   <NavigationLink to="/blog">Blog</NavigationLink>
                 </NavigationItem> */}
-                <NavigationItem>
-                  <NavigationLink to="/contact">Contact</NavigationLink>
-                </NavigationItem>
-              </NavigationItems>
-            </div>
-          </Navigation>
-        </SiteNav>
-      </NavbarContainer>
-      <div
-        style={{
-          height: "100%",
-        }}
-      >
-        {children}
-      </div>
-    </Container>
-  )
+                    <NavigationItem>
+                      <NavigationLink to="/contact">Contact</NavigationLink>
+                    </NavigationItem>
+                  </NavigationItems>
+                </div>
+              </Navigation>
+            </SiteNav>
+          </NavbarContainer>
+          <div
+            style={{
+              height: "100%",
+            }}
+          >
+            {this.props.children}
+          </div>
+        </Container>
+      </>
+    )
+  }
 }
 
 DefaultLayout.propTypes = {
