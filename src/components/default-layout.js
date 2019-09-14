@@ -18,6 +18,9 @@ import "./../theme.css"
 import menuBtn from "./../images/menu-btn.svg"
 import profilePhto from "./../images/leonwright.png"
 
+// Custom Components
+import MobileNavigation from "./MobileNav"
+
 const Container = styled.div`
   height: 100vh;
 
@@ -153,7 +156,7 @@ const DefaultLayout = ({ children }) => {
     <Container>
       <NavbarContainer>
         <SiteNav>
-          <MobileMenuBtn src={menuBtn} alt="menu-btn" />
+          <MobileNavigation />
 
           <Navigation>
             <NavigationHeader>
