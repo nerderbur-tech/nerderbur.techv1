@@ -173,7 +173,7 @@ class ContactPage extends Component {
     if (this.state.formValid) {
       const requester = new Requester()
       requester
-        .callMarketingService("POST", "leads/", {
+        .callMarketingService("POST", "ContactMe", {
           ...formData,
           leadType: "contact-form",
         })
